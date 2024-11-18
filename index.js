@@ -6,14 +6,14 @@ const cors = require("cors");
 const app = express();
 
 // CORS 설정: 특정 도메인만 허용
-const corsOptions = {
-  origin: "https://tasks-front-1ogt.vercel.app", // 허용할 프론트엔드 도메인
-  methods: ["GET", "POST", "PUT", "DELETE"], // 허용할 HTTP 메서드
-  allowedHeaders: ["Content-Type", "Authorization"], // 허용할 헤더
-  credentials: true, // 쿠키 허용
-};
+// const corsOptions = {
+//   origin: "https://tasks-front-1ogt.vercel.app", // 허용할 프론트엔드 도메인
+//   methods: ["GET", "POST", "PUT", "DELETE"], // 허용할 HTTP 메서드
+//   allowedHeaders: ["Content-Type", "Authorization"], // 허용할 헤더
+//   credentials: true, // 쿠키 허용
+// };
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
